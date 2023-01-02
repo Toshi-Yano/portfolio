@@ -19,16 +19,20 @@
           "builtin",
           "external",
           "internal",
-          "parent",
-          "sibling",
-          "index",
+          ["parent", "sibling"],
           "object",
-          "type"
+          "type",
+          "index"
         ],
         "newlines-between": "always",
-        "alphabetize": {
-          "order": "asc"
-        }
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "pathGroups": [
+          { "pattern": "@/libs/**", "group": "internal", "position": "before" },
+          { "pattern": "@/generated/**", "group": "internal", "position": "before" },
+          { "pattern": "@/components/ui/**", "group": "internal", "position": "before" },
+          { "pattern": "./**.module.css", "group": "index", "position": "before" }
+        ]
       }
     ],
     "import/no-duplicates": "error",
