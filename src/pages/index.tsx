@@ -3,11 +3,12 @@ import Head from 'next/head';
 import type { NextPage } from 'next';
 
 import Layout from '@/components/Layout';
+import Post from '@/components/Post';
 import fetchPosts from '@/features/posts/postProvider';
-import { Post } from '@/types';
+import { PostDetail } from '@/types';
 
 type Props = {
-  posts: Post[];
+  posts: PostDetail[];
 };
 
 export async function getStaticProps() {
@@ -21,8 +22,7 @@ const Home: NextPage<Props> = ({ posts }: Props) => {
       <Head>
         <title>Toshi-Yano</title>
       </Head>
-      <h1>Hello World!</h1>
-      <div>{posts[0].title}</div>
+      <Post posts={posts}></Post>
     </Layout>
   );
 };
