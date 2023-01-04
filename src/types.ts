@@ -1,5 +1,6 @@
-export type Post = {
-  created_at: string;
+export type PostDetail = {
+  id: string;
+  ogpUrl?: string;
   title: string;
   url: string;
 };

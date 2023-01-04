@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { Post, QiitaItem } from '@/types';
+import { PostDetail, QiitaItem } from '@/types';
 
 export default async function fetchQiitaPosts() {
   try {
@@ -10,15 +10,14 @@ export default async function fetchQiitaPosts() {
         Authorization: `Bearer ${process.env.QIITA_API_ACCESS_TOKEN}`,
       },
     });
-
-    return data.map(pickPropertyForDisplay);
+    return data.map(pickDisplayProperties);
   } catch (error) {
     console.error(error);
     throw new Error('Qiitaの記事取得処理に失敗しました。');
   }
 }
 
-function pickPropertyForDisplay(item: QiitaItem) {
-  const displayItem = (({ title, created_at, url }) => ({ created_at, title, url }))(item);
-  return displayItem as Post;
+function pickDisplayProperties(item: QiitaItem) {
+  const displayItem = (({ id, title, url }) => ({ id, title, url }))(item);
+  return displayItem as PostDetail;
 }
