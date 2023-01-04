@@ -55,3 +55,9 @@ export type QiitaUser = {
   twitter_screen_name: string;
   website_url: string;
 };
+
+export type Post = {
+  created_at: string;
+  title: string;
+  url: string;
+};
