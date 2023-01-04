@@ -1,3 +1,9 @@
+export type Post = {
+  created_at: string;
+  title: string;
+  url: string;
+};
+
 export type QiitaItem = {
   body: string;
   coediting: boolean;
@@ -54,10 +60,4 @@ export type QiitaUser = {
   team_only: boolean;
   twitter_screen_name: string;
   website_url: string;
-};
-
-export type Post = {
-  created_at: string;
-  title: string;
-  url: string;
 };
