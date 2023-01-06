@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -31,14 +32,7 @@ export default function Post({ posts }: Props) {
                 rel='noreferrer'
                 target='_blank'
               >
-                <Image
-                  alt={`【画像】${title}`}
-                  height={630}
-                  layout='responsive'
-                  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                  src={ogpUrl!}
-                  width={1200}
-                />
+                <Image alt={`【画像】${title}`} height={630} src={ogpUrl!} width={1200} />
               </a>
             </div>
           );
