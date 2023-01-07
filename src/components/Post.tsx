@@ -38,7 +38,16 @@ export default function Post({ posts }: Props) {
           );
         })}
       </div>
-      {isHiddenAny() && <button onClick={addDisplayNumber}>さらに表示</button>}
+      {isHiddenAny() && (
+        <button
+          // className='inline-block rounded border border-indigo-600 px-12 py-3 text-sm font-medium text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500'
+          // className='py-1.5 my-4  block px-4 transition-colors w-72  bg-gray-50 border active:bg-gray-200 font-medium border-gray-200 text-gray-900 rounded-lg hover:bg-gray-100 disabled:opacity-50'
+          className='px-6 py-2 my-2 mx-8 self-auto transition ease-in duration-200 text-gray-400 rounded-full focus:outline-none hover:bg-gray-800 hover:border-gray-400 hover:border-solid hover:border-2'
+          onClick={addDisplayNumber}
+        >
+          もっと見る
+        </button>
+      )}
     </div>
   );
 }
