@@ -1,4 +1,4 @@
-export type PostDetail = {
+export type PostType = {
   id: string;
   ogpUrl?: string;
   title: string;

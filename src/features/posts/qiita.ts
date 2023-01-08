@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { PostDetail, QiitaItem } from '@/types';
+import { PostType, QiitaItem } from '@/types';
 
 export default async function fetchQiitaPosts() {
   try {
@@ -19,5 +19,5 @@ export default async function fetchQiitaPosts() {
 
 function pickDisplayProperties(item: QiitaItem) {
   const displayItem = (({ id, title, url }) => ({ id, title, url }))(item);
-  return displayItem as PostDetail;
+  return displayItem as PostType;
 }

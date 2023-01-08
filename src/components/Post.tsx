@@ -2,10 +2,10 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-import { PostDetail } from '@/types';
+import { PostType } from '@/types';
 
 type Props = {
-  posts: PostDetail[];
+  posts: PostType[];
 };
 
 const displayUnit = 4;
@@ -22,7 +22,7 @@ export default function Post({ posts }: Props) {
 
   return (
     <div className='mx-auto max-w-screen-md'>
-      <div className='flex flex-wrap gap-y-12'>
+      <div className='flex flex-wrap gap-y-4'>
         {displayPosts.map(({ id, ogpUrl, title, url }, i) => {
           return (
             <div className={`w-full p-0 sm:w-1/2 ${i % 2 === 0 ? 'sm:pr-2' : 'sm:pl-2'}`} key={id}>
