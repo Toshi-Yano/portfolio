@@ -62,3 +62,8 @@ export type QiitaUser = {
   twitter_screen_name: string;
   website_url: string;
 };
+
+export type QualificationType = {
+  fileName: string;
+  pathName: string;
+};
