@@ -4,6 +4,7 @@ import type { NextPage } from 'next';
 
 import Layout from '@/components/Layout';
 import Post from '@/components/Post';
+import Profile from '@/components/Profile';
 import Qualification from '@/components/Qualification';
 import fetchPosts from '@/features/posts/postProvider';
 import getQualifications from '@/features/qualifications/qualificationProvider';
@@ -26,6 +27,7 @@ const Home: NextPage<Props> = ({ posts, qualifications }: Props) => {
       <Head>
         <title>Toshi-Yano</title>
       </Head>
+      <Profile />
       <Post posts={posts}></Post>
       <Qualification qualifications={qualifications}></Qualification>
     </Layout>
