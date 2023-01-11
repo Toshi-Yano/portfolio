@@ -3,11 +3,12 @@ import Head from 'next/head';
 import type { NextPage } from 'next';
 
 import Layout from '@/components/Layout';
-import Post from '@/components/Post';
+// import Post from '@/components/Post';
 import Profile from '@/components/Profile';
-import Qualification from '@/components/Qualification';
-import fetchPosts from '@/features/posts/postProvider';
-import getQualifications from '@/features/qualifications/qualificationProvider';
+import fetchPosts from '@/features/posts/api/postProvider';
+import Post from '@/features/posts/components/Post';
+import getQualifications from '@/features/qualifications/api/qualificationProvider';
+import Qualification from '@/features/qualifications/components/Qualification';
 import { PostType, QualificationType } from '@/types';
 
 type Props = {

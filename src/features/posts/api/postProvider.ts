@@ -1,6 +1,6 @@
-import { generateOGP } from './ogpGenerator';
+import { generateOGP } from '@/libs/ogpGenerator';
 
-import fetchQiitaPosts from '@/features/posts/qiita';
+import fetchQiitaPosts from '@/features/posts/api/qiita';
 
 export default async function fetchPosts() {
   const posts = await fetchQiitaPosts();

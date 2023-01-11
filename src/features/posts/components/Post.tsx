@@ -1,6 +1,5 @@
-import PostCard from './PostCard';
-
 import SectionHeader from '@/components/SectionHeader';
+import PostCard from '@/features/posts/components/PostCard';
 import { useDisplayArray } from '@/hooks/useDisplayArray';
 import { PostType } from '@/types';
 
