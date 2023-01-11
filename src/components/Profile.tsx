@@ -15,6 +15,7 @@ export default function Profile() {
       <div className='mb-4 text-center opacity-90'>
         <a href='#' className='relative block'>
           <Image
+            priority={true}
             alt='avetor'
             src='/avetor.jpg'
             width={800}
