@@ -27,7 +27,7 @@ export default function Profile() {
       <div className='text-center'>
         <p className='text-2xl text-white'>{profile.name}</p>
       </div>
-      <div className='flex justify-center pt-2 mx-auto text-gray-500'>
+      <div className='flex justify-center pt-2 mx-auto'>
         <a target='_blank' className='mx-1' href={profile.URL.git}>
           <FaGithubSquare size={30} color={'#ccc'} />
         </a>

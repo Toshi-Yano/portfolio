@@ -49,6 +49,6 @@ img {
   min-height: 100vh;
 }
 
-.base-text-color {
-  @apply text-gray-800;
+.base-text-gray {
+  @apply text-gray-400;
 }
