@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-import Image from 'next/image';
+import PostCard from './PostCard';
 
 import SectionHeader from '@/components/SectionHeader';
 import { useDisplayArray } from '@/hooks/useDisplayArray';
@@ -19,22 +18,8 @@ export default function Post({ posts }: Props) {
     <SectionHeader title='Qiita'>
       <div className='mx-auto max-w-screen-md'>
         <div className='flex flex-wrap gap-y-4'>
-          {displayArray.map(({ id, ogpUrl, title, url }, i) => {
-            return (
-              <div
-                className={`w-full p-0 sm:w-1/2 ${i % 2 === 0 ? 'sm:pr-2' : 'sm:pl-2'}`}
-                key={id}
-              >
-                <a
-                  className='block overflow-hidden rounded-lg border-2 border-gray-300 hover:opacity-50'
-                  href={url}
-                  rel='noreferrer'
-                  target='_blank'
-                >
-                  <Image alt={title} height={200} src={ogpUrl!} width={400} />
-                </a>
-              </div>
-            );
+          {displayArray.map((post, i) => {
+            return <PostCard key={post.id} isLeft={i % 2 === 0} post={post} />;
           })}
         </div>
         {isHiddenAny() && (
