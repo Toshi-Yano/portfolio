@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import Image from 'next/image';
-import { useState } from 'react';
 
 import SectionHeader from '@/components/SectionHeader';
+import { useDisplayArray } from '@/hooks/useDisplayArray';
 import { PostType } from '@/types';
 
 type Props = {
@@ -12,20 +12,14 @@ type Props = {
 const displayUnit = 4;
 
 export default function Post({ posts }: Props) {
-  const [displayNumber, setDisplayNumber] = useState(displayUnit);
-  const displayPosts = posts.slice(0, displayNumber);
-
-  const addDisplayNumber = () => {
-    setDisplayNumber(displayNumber + displayUnit);
-  };
-
-  const isHiddenAny = () => displayPosts.length < posts.length;
+  const [displayArray, addDisplayArray] = useDisplayArray<PostType>(posts, displayUnit);
+  const isHiddenAny = () => displayArray.length < posts.length;
 
   return (
     <SectionHeader title='Qiita'>
       <div className='mx-auto max-w-screen-md'>
         <div className='flex flex-wrap gap-y-4'>
-          {displayPosts.map(({ id, ogpUrl, title, url }, i) => {
+          {displayArray.map(({ id, ogpUrl, title, url }, i) => {
             return (
               <div
                 className={`w-full p-0 sm:w-1/2 ${i % 2 === 0 ? 'sm:pr-2' : 'sm:pl-2'}`}
@@ -46,7 +40,7 @@ export default function Post({ posts }: Props) {
         {isHiddenAny() && (
           <button
             className='px-6 py-2 my-2 mx-auto block text-gray-400 rounded-full hover:text-white hover:border-gray-400'
-            onClick={addDisplayNumber}
+            onClick={addDisplayArray}
           >
             さらに表示
           </button>

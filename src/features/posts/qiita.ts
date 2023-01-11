@@ -5,7 +5,7 @@ import { PostType, QiitaItem } from '@/types';
 export default async function fetchQiitaPosts() {
   try {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const { data } = await axios.get<readonly QiitaItem[]>(process.env.QIITA_API_URL!, {
+    const { data } = await axios.get<QiitaItem[]>(process.env.QIITA_API_URL!, {
       headers: {
         Authorization: `Bearer ${process.env.QIITA_API_ACCESS_TOKEN}`,
       },
