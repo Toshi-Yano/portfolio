@@ -16,7 +16,7 @@ export default function Post({ posts }: Props) {
   return (
     <SectionHeader title='Qiita'>
       <div className='mx-auto max-w-screen-md'>
-        <div className='flex flex-wrap gap-y-4'>
+        <div className='flex flex-wrap gap-y-4 px-8 md:px-0'>
           {displayArray.map((post, i) => {
             return <PostCard key={post.id} isLeft={i % 2 === 0} post={post} />;
           })}
