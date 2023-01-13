@@ -3,8 +3,8 @@ import Head from 'next/head';
 import type { NextPage } from 'next';
 
 import Layout from '@/components/Layout';
-// import Post from '@/components/Post';
 import Profile from '@/components/Profile';
+import Skills from '@/components/Skills';
 import fetchPosts from '@/features/posts/api/postProvider';
 import Post from '@/features/posts/components/Post';
 import getQualifications from '@/features/qualification/api/qualificationProvider';
@@ -30,6 +30,7 @@ const Home: NextPage<Props> = ({ posts, qualifications }: Props) => {
       </Head>
       <Profile />
       <Post posts={posts}></Post>
+      <Skills />
       <Qualification qualifications={qualifications}></Qualification>
     </Layout>
   );
