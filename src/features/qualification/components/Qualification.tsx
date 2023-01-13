@@ -9,7 +9,7 @@ type Props = {
 
 export default function Qualification({ qualifications }: Props) {
   return (
-    <SectionHeader title='資格'>
+    <SectionHeader title='Qualifications'>
       <div className='flex flex-wrap gap-y-4 justify-center mx-auto max-w-screen-md'>
         {qualifications.map((qualification) => (
           <Image

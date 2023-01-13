@@ -7,8 +7,8 @@ import Layout from '@/components/Layout';
 import Profile from '@/components/Profile';
 import fetchPosts from '@/features/posts/api/postProvider';
 import Post from '@/features/posts/components/Post';
-import getQualifications from '@/features/qualifications/api/qualificationProvider';
-import Qualification from '@/features/qualifications/components/Qualification';
+import getQualifications from '@/features/qualification/api/qualificationProvider';
+import Qualification from '@/features/qualification/components/Qualification';
 import { PostType, QualificationType } from '@/types';
 
 type Props = {
