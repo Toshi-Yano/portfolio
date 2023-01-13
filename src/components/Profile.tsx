@@ -28,10 +28,10 @@ export default function Profile() {
         <p className='text-2xl text-white'>{profile.name}</p>
       </div>
       <div className='flex justify-center pt-2 mx-auto'>
-        <a target='_blank' className='mx-1' href={profile.URL.git}>
+        <a target='_blank' className='mx-1 hover:opacity-60' href={profile.URL.git}>
           <FaGithubSquare size={30} color={'#ccc'} />
         </a>
-        <a target='_blank' className='mx-1' href={profile.URL.twitter}>
+        <a target='_blank' className='mx-1 hover:opacity-60' href={profile.URL.twitter}>
           <FaTwitterSquare size={30} color={'#ccc'} />
         </a>
       </div>
