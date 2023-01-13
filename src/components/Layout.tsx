@@ -8,6 +8,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>{children}</main>
+      <footer className='py-2 text-center text-sm base-text-gray'>
+        &copy; 2023 Toshi-Yano. All Rights Reserved.
+      </footer>
     </div>
   );
 }
