@@ -5,7 +5,7 @@ const skillsOnPrivate = ['TypeScript', 'Node.js', 'React', 'NestJS', 'Next.js'];
 
 export default function Skills() {
   const generateParagraph = (text: string) => {
-    return <p className='text-left text-l leading-7'>{text}</p>;
+    return <p className='text-center text-l leading-7'>{text}</p>;
   };
   return (
     <SectionHeader title='Skills'>
