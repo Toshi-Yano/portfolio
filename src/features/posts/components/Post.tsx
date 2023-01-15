@@ -26,7 +26,7 @@ export default function Post({ posts }: Props) {
             className='px-6 py-2 my-2 mx-auto block base-text-gray rounded-full hover:text-white hover:border-gray-400'
             onClick={addDisplayArray}
           >
-            さらに表示
+            Show More
           </button>
         )}
       </div>
