@@ -19,7 +19,7 @@ function Qualification({ qualifications }: Props) {
             src={qualification.pathName}
             width={100}
             height={100}
-            className='mx-1'
+            className='w-50 h-auto mx-1'
           />
         ))}
       </div>
