@@ -2,10 +2,11 @@ import axios from 'axios';
 
 import { PostType, QiitaItem } from '@/types';
 
+const QIITA_API_URL = 'https://qiita.com/api/v2/authenticated_user/items';
+
 export default async function fetchQiitaPosts() {
   try {
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const { data } = await axios.get<QiitaItem[]>(process.env.QIITA_API_URL!, {
+    const { data } = await axios.get<QiitaItem[]>(QIITA_API_URL, {
       headers: {
         Authorization: `Bearer ${process.env.QIITA_API_ACCESS_TOKEN}`,
       },
