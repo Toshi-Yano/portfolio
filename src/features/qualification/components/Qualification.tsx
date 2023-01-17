@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { memo } from 'react';
 
 import SectionHeader from '@/components/SectionHeader';
 import { QualificationType } from '@/types';
@@ -7,7 +8,7 @@ type Props = {
   qualifications: QualificationType[];
 };
 
-export default function Qualification({ qualifications }: Props) {
+function Qualification({ qualifications }: Props) {
   return (
     <SectionHeader title='Qualifications'>
       <div className='flex flex-wrap gap-y-4 justify-center mx-auto max-w-screen-md'>
@@ -25,3 +26,5 @@ export default function Qualification({ qualifications }: Props) {
     </SectionHeader>
   );
 }
+
+export default memo(Qualification);

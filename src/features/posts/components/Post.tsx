@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import SectionHeader from '@/components/SectionHeader';
 import PostCard from '@/features/posts/components/PostCard';
 import { useDisplayArray } from '@/hooks/useDisplayArray';
@@ -9,7 +11,7 @@ type Props = {
 
 const displayUnit = 4;
 
-export default function Post({ posts }: Props) {
+function Post({ posts }: Props) {
   const [displayArray, addDisplayArray] = useDisplayArray<PostType>(posts, displayUnit);
   const isHiddenAny = () => displayArray.length < posts.length;
 
@@ -33,3 +35,5 @@ export default function Post({ posts }: Props) {
     </SectionHeader>
   );
 }
+
+export default memo(Post);
