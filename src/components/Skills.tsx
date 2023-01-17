@@ -1,6 +1,6 @@
 import SectionHeader from '@/components/SectionHeader';
 
-const skillsOnWork = ['JavaScript', 'Java', 'Apex', 'Visualforce', 'LWC'];
+const skillsOnWork = ['JavaScript', 'Java', 'Apex', 'Visualforce', 'Lightning Web Components'];
 const skillsOnPrivate = ['TypeScript', 'Node.js', 'React', 'NestJS', 'Next.js'];
 
 export default function Skills() {
