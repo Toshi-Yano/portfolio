@@ -1,0 +1,12 @@
+name: deployment batch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '1 0 * * *'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello, world!
