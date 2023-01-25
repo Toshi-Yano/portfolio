@@ -1,6 +1,11 @@
 name: deployment batch
 on:
   workflow_dispatch:
+    inputs:
+      ref:
+        description: branch|tag|SHA to checkout
+        default: 'main'
+        required: true
   schedule:
     - cron: '16 0 * * *'
 jobs:
@@ -8,7 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo Hello, world!!!!!
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.inputs.ref }}
       - uses: amondnet/vercel-action@v25
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
