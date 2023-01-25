@@ -11,3 +11,7 @@ https://toshi-yano-portfolio.vercel.app/
 - React (v18.2)
 - Node.js (v18)
 - TailwindCSS
+- Prettier
+- ESLint
+- husky
+- GitHub Actions（APIによる投稿記事取得・画像読み出しをSSG化するために使用）
