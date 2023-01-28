@@ -3,6 +3,7 @@
 https://toshi-yano-portfolio.vercel.app/
 
 ![デモ画像](@Image/README/2023-01-18-08-42-11.png)
+![コンポーネント](@Image/README/2023-01-28-23-11-48.png)
 ![分析](@Image/README/2023-01-18-08-49-13.png)
 
 # 使用技術
