@@ -8,7 +8,7 @@ https://toshi-yano-portfolio.vercel.app/
 
 # 使用技術
 - TypeScript (v4.9)
-- Next.js (v13)
+- Next.js (v14 / Pages Router)
 - React (v18.2)
 - Node.js (v18)
 - TailwindCSS
